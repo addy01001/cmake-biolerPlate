@@ -9,6 +9,7 @@ file (
 GLOB source_files 
     "${source_dir}/*.cpp" 
     "${source_dir}/Helper/*.cpp"
+    "${source_dir}/handlers/*.cpp"
 )
 
 add_executable(hello ${source_files})

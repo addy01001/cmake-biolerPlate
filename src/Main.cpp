@@ -8,22 +8,20 @@ int main(void)
 {
   bool on = true;
   char ch[100];
-  std::vector<char*> store;
+  std::vector<std::string> store;
   Log("Initialized..");
   while (on)
   {
-    std::cin>> ch;
+    std::cin.getline(ch, 100);
     if (strcmp(ch,"q")==0)
     {
       on = false;
     }
     else
     {
-      store.push_back(ch);
-      Log(store[rand()%store.size()]);
-      handleInput(ch);
+      handleInput(ch, store);
     }
   }
-  Log("Exitting..");
+  Log("Exiting..");
   return 0;
 }

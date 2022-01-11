@@ -1,25 +1,28 @@
 #include <iostream>
 #include <vector>
-#include "headers/logger.h"
-#include "headers/eventHandler.h"
+#include "include/logger.h"
+#include "include/eventHandler.h"
 #include <string.h>
+#include "include/structure.h"
 
 int main(void)
 {
   bool on = true;
   char ch[100];
-  std::vector<std::string> store;
   Log("Initialized..");
   while (on)
   {
     std::cin.getline(ch, 100);
-    if (strcmp(ch,"q")==0)
+    if (strcmp(ch, "q") == 0)
     {
       on = false;
     }
     else
     {
-      handleInput(ch, store);
+      Node::inputEvent temp;
+      strcpy(temp.type, "Text");
+      strcpy(temp.event, ch);
+      handleInput(temp);
     }
   }
   Log("Exiting..");

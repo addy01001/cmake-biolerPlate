@@ -1,10 +1,13 @@
-#include "../headers/logger.h"
+#include "../include/logger.h"
 #include <vector>
-#include <string.h>
+#include <string>
 #include <iostream>
+#include "../include/structure.h"
 
-void handleInput(const char *ch, std::vector<std::string> store)
+std::vector<Node::inputEvent> store;
+
+void handleInput(Node::inputEvent data)
 {
-    store.push_back(ch);
-    std::cout << "Response: " << store[rand() % store.size()] << std::endl;
+    store.push_back(data);
+    std::cout << "Response: " << store[rand() % store.size()].event << std::endl;
 }

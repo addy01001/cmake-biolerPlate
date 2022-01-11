@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
-#include "include/logger.h"
-#include "include/eventHandler.h"
+#include "logger.h"
+#include "eventHandler.h"
 #include <string.h>
-#include "include/structure.h"
+#include "structure.h"
 
 int main(void)
 {

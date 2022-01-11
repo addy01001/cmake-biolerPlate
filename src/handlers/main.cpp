@@ -1,10 +1,11 @@
-#include "../include/logger.h"
+#include "logger.h"
 #include <vector>
 #include <string>
 #include <iostream>
-#include "../include/structure.h"
+#include "structure.h"
 
 std::vector<Node::inputEvent> store;
+std::string state="Neutral";
 
 void handleInput(Node::inputEvent data)
 {
